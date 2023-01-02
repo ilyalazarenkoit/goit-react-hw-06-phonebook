@@ -6,11 +6,11 @@ const ContactList = () => {
   const dispatch = useDispatch();
   const filter = useSelector(state => state.filter);
   const contacts = useSelector(state => state.contacts.contacts);
-  const getContacts = () => {
+  function getContacts() {
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(filter)
     );
-  };
+  }
 
   return (
     <>
